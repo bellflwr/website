@@ -1,11 +1,10 @@
 {{ define "main" }}
     {{ .Content }}
-    <hr>
-    <ul class="blog-list">
+    <ul class="content-list">
         {{ range .Pages }}
             <li>
                 <article>
-                    <a href="{{.Permalink}}">{{.Title}}</a>
+                    <a href="{{.RelPermalink}}">{{.Title}}</a>
                     <h4>{{.Date.Format "January 2, 2006"}}</h4>
                     
                     {{ truncate 50 .Content }}
