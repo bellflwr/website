@@ -2,7 +2,7 @@
     <a href="{{.RelPermalink}}">{{.Title}} &gt;</a>
     <h4>{{.Date.Format "January 2, 2006"}}</h4>
     
-    {{ truncate 50 .Content }}
+    {{ .Summary }}
     {{ with .GetTerms "tags"}}
         <ul class="tags">
             {{ range . }}
